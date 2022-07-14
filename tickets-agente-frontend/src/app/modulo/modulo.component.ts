@@ -15,12 +15,13 @@ export class ModuloComponent implements OnInit {
     private activatedRoute: ActivatedRoute
   ) { }
 
-  currentEntity: Modulo = 
+  currentEntity: Modulo =
   {
     moduloId: 0,
     name: "",
     url: "",
     created: new Date(),
+    updated: new Date(),
     enabled: true
   };
 
@@ -39,12 +40,13 @@ export class ModuloComponent implements OnInit {
     this.moduloService.save(this.currentEntity)
     .subscribe(
       () => {
-        this.currentEntity = 
+        this.currentEntity =
         {
           moduloId: 0,
           name: "",
           url: "",
           created: new Date(),
+          updated: new Date(),
           enabled: true
         };
       }

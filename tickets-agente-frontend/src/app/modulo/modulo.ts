@@ -3,5 +3,6 @@ export interface Modulo {
     name: string,
     url: string,
     created: Date,
+    updated: Date,
     enabled: boolean
 }

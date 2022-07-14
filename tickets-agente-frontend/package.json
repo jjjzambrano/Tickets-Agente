@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "name": "tickets-frontend",
-=======
-  "name": "ta-rol-frontend",
->>>>>>> rol
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -14,16 +10,6 @@
   },
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
-    "@angular/animations": "^14.0.0",
-    "@angular/common": "^14.0.0",
-    "@angular/compiler": "^14.0.0",
-    "@angular/core": "^14.0.0",
-    "@angular/forms": "^14.0.0",
-    "@angular/platform-browser": "^14.0.0",
-    "@angular/platform-browser-dynamic": "^14.0.0",
-    "@angular/router": "^14.0.0",
-=======
     "@angular/animations": "~13.3.0",
     "@angular/common": "~13.3.0",
     "@angular/compiler": "~13.3.0",
@@ -32,7 +18,6 @@
     "@angular/platform-browser": "~13.3.0",
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
->>>>>>> motivo
     "daisyui": "^2.19.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
@@ -52,10 +37,6 @@
     "karma-jasmine-html-reporter": "~1.7.0",
     "postcss": "^8.4.14",
     "tailwindcss": "^3.1.6",
-<<<<<<< HEAD
-    "typescript": "~4.7.2"
-=======
     "typescript": "~4.6.2"
->>>>>>> motivo
   }
 }

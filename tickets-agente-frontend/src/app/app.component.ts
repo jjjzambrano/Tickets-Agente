@@ -5,13 +5,5 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  title = 'Modulo';
-=======
   title = 'Tickets-Agente';
->>>>>>> sugerencia
-=======
-  title = 'TA-Rol';
->>>>>>> rol
 }

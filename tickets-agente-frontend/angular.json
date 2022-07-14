@@ -1,11 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-<<<<<<< HEAD
     "analytics": "00687adb-1189-4906-8231-fa31522711d4"
-=======
-    "analytics": "e7056466-e79f-44cc-8aa0-635db62c9071"
->>>>>>> motivo
   },
   "version": 1,
   "newProjectRoot": "projects",
@@ -20,11 +16,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-<<<<<<< HEAD
             "outputPath": "dist/tickets-frontend",
-=======
-            "outputPath": "dist/ta-rol-frontend",
->>>>>>> rol
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -109,11 +101,5 @@
       }
     }
   },
-<<<<<<< HEAD
   "defaultProject": "tickets-frontend"
-=======
-  "cli": {
-    "analytics": "e7722c7b-2c50-4b40-abd7-6df58a2724bb"
-  }
->>>>>>> rol
 }
