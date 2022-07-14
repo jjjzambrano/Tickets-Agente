@@ -1,9 +1,4 @@
-<<<<<<< HEAD:tickets-agente-backend/src/main/java/yavirac/tickets/feature/person/PersonController.java
-package yavirac.tickets.feature.person;
-=======
 package yavirac.tickets.feature.modulo;
->>>>>>> modulo:tickets-agente-backend/src/main/java/yavirac/tickets/feature/modulo/ModuloController.java
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
