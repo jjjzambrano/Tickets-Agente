@@ -3,6 +3,7 @@ export interface Sugerencia{
   motivo: string,
   sugerenci: string,
   created: Date,
+  updated: Date,
   enable: boolean,
   archive: boolean
 }

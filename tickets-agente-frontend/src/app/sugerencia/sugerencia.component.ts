@@ -19,6 +19,7 @@ export class SugerenciaComponent implements OnInit {
     motivo: "",
     sugerenci: "",
     created: new Date(),
+    updated: new Date(),
     enable: true,
     archive: true,
   };
@@ -44,6 +45,7 @@ export class SugerenciaComponent implements OnInit {
     motivo: "",
     sugerenci: "",
     created: new Date(),
+    updated: new Date(),
     enable: true,
     archive: true,
         };
