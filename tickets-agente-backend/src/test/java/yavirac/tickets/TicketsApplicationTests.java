@@ -1,10 +1,10 @@
-package yavirac.seguridad;
+package yavirac.tickets;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SeguridadApplicationTests {
+class TicketsApplicationTests {
 
 	@Test
 	void contextLoads() {

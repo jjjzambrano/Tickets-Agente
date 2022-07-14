@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "00687adb-1189-4906-8231-fa31522711d4"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -17,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/seguridad-frontend",
+            "outputPath": "dist/tickets-frontend",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -102,5 +105,5 @@
       }
     }
   },
-  "defaultProject": "seguridad-frontend"
+  "defaultProject": "tickets-frontend"
 }
