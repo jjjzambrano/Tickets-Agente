@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+<<<<<<< HEAD
 import { HttpClientModule } from '@angular/common/http';
 <<<<<<< HEAD
 import { ModuloComponent } from './modulo/modulo.component';
@@ -19,6 +20,15 @@ import { SugerenciaComponent } from './sugerencia/sugerencia.component';
     AppComponent,
     SugerenciaComponent
 >>>>>>> sugerencia
+=======
+import { RolComponent } from './rol/rol.component';
+import { HttpClientModule } from '@angular/common/http';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    RolComponent
+>>>>>>> rol
   ],
   imports: [
     BrowserModule,

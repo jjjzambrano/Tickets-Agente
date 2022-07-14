@@ -6,8 +6,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 <<<<<<< HEAD
+<<<<<<< HEAD
   title = 'Modulo';
 =======
   title = 'Tickets-Agente';
 >>>>>>> sugerencia
+=======
+  title = 'TA-Rol';
+>>>>>>> rol
 }
