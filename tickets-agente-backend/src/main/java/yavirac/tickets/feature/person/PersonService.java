@@ -1,4 +1,4 @@
-package yavirac.seguridad.feature.person;
+package yavirac.tickets.feature.person;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
