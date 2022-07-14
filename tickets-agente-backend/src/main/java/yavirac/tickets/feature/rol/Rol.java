@@ -1,25 +1,32 @@
-package yavirac.tickets.feature.person;
+package yavirac.tickets.feature.rol;
 
-import java.sql.Time;
 import java.sql.Timestamp;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
-
 import lombok.Data;
 
 @Data
-@Table("persons")
-public class Person {
+@Table("roles")
+public class Rol {
 
     @Id
-    @Column("person_id")
-    private long personId;
+    @Column("rol_id")
+    private long rolId;
+    @Column("nombre")
     private String name;
-    private String dni;
+    @Column("admin")
+    private boolean admin;
+    @Column("created")
     private Timestamp created;
+    @Column("updated")
     private Timestamp updated;
+    @Column("enable")
     private boolean enabled;
+    @Column("archived")
+    private boolean archived;
+    @Column("modulo")
+    private long module;
     
 }

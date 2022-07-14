@@ -3,13 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "seguridad-frontend": {
+    "TA-Rol_frontend": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:application": {
-          "strict": true
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -17,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/seguridad-frontend",
+            "outputPath": "dist/ta-rol-frontend",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "seguridad-frontend:build:production"
+              "browserTarget": "TA-Rol_frontend:build:production"
             },
             "development": {
-              "browserTarget": "seguridad-frontend:build:development"
+              "browserTarget": "TA-Rol_frontend:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "seguridad-frontend:build"
+            "browserTarget": "TA-Rol_frontend:build"
           }
         },
         "test": {
@@ -102,5 +98,7 @@
       }
     }
   },
-  "defaultProject": "seguridad-frontend"
+  "cli": {
+    "analytics": "e7722c7b-2c50-4b40-abd7-6df58a2724bb"
+  }
 }

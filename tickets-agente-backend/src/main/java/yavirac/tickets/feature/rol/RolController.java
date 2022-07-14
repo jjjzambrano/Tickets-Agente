@@ -1,4 +1,4 @@
-package yavirac.tickets.feature.person;
+package yavirac.tickets.feature.rol;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,39 +14,38 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/person")
-@CrossOrigin({"*"})
-public class PersonController {
+@RequestMapping("/api/rol")
+@CrossOrigin("*")
+public class RolController {
     
     @Autowired
-    PersonService personService;
+    RolService rolService;
 
     //CRUD
 
     //Create
     @PostMapping("/save")
-    public Person save(@RequestBody Person person){
-        return personService.save(person);
+    public Rol save(@RequestBody Rol rol){
+        return rolService.save(rol);
     }
 
     //Read
     @GetMapping("/{id}")
-    public Person findById(@PathVariable long id){
-        return personService.findById(id);
+    public Rol findbyId(@PathVariable long id){
+        return rolService.findById(id);
     }
 
     //Update
     @PutMapping("/update")
-    public Person update(@RequestBody Person person)
+    public Rol update(@RequestBody Rol rol)
     {
-        return personService.save(person);
+        return rolService.save(rol);
     }
 
     //Delete
     @DeleteMapping("/deleteById/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable long id){
-        personService.deleteById(id);
+        rolService.deleteById(id);
     }
-
 }
