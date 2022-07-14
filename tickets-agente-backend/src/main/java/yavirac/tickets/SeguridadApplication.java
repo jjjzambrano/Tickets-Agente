@@ -1,4 +1,4 @@
-package yavirac.seguridad;
+package yavirac.tickets;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
