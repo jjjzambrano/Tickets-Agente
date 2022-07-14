@@ -4,12 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PersonComponent } from './person/person.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MotivoComponent } from './motivo/motivo.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    PersonComponent
+    MotivoComponent
   ],
   imports: [
     BrowserModule,
@@ -21,3 +22,4 @@ import { HttpClientModule } from '@angular/common/http';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
