@@ -1,4 +1,4 @@
-package yavirac.tickets.feature.person;
+package yavirac.tickets.feature.sugerencia;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,39 +14,39 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/person")
+@RequestMapping("/api/sugerencia")
 @CrossOrigin({"*"})
-public class PersonController {
+public class SugerenciaController {
     
     @Autowired
-    PersonService personService;
+    SugerenciaService sugerenciaService;
 
     //CRUD
 
     //Create
     @PostMapping("/save")
-    public Person save(@RequestBody Person person){
-        return personService.save(person);
+    public Sugerencia save(@RequestBody Sugerencia sugerencia){
+        return sugerenciaService.save(sugerencia);
     }
 
     //Read
     @GetMapping("/{id}")
-    public Person findById(@PathVariable long id){
-        return personService.findById(id);
+    public Sugerencia findById(@PathVariable long id){
+        return sugerenciaService.findById(id);
     }
 
     //Update
     @PutMapping("/update")
-    public Person update(@RequestBody Person person)
+    public Sugerencia update(@RequestBody Sugerencia sugerencia)
     {
-        return personService.save(person);
+        return sugerenciaService.save(sugerencia);
     }
 
     //Delete
     @DeleteMapping("/deleteById/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable long id){
-        personService.deleteById(id);
+        sugerenciaService.deleteById(id);
     }
 
 }
