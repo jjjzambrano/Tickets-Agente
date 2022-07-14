@@ -1,20 +1,20 @@
--- Table: public.modulo
+-- Table: public.sugerencia
 
--- DROP TABLE public.modulo;
+-- DROP TABLE IF EXISTS public.sugerencia;
 
-CREATE TABLE public.modulo
+CREATE TABLE IF NOT EXISTS public.sugerencia
 (
-    modulo_id integer NOT NULL DEFAULT nextval('modulo_modulo_id_seq'::regclass),
-    name character varying COLLATE pg_catalog."default",
-    url character varying COLLATE pg_catalog."default",
+    sugerencia_id integer NOT NULL DEFAULT nextval('sugerencia_sugerencia_id_seq'::regclass),
+    motivo character varying COLLATE pg_catalog."default",
+    sugerenci character varying COLLATE pg_catalog."default",
     created timestamp with time zone,
     updated timestamp with time zone,
-    enabled boolean,
+    enable boolean,
     archive boolean,
-    CONSTRAINT modulo_pkey PRIMARY KEY (modulo_id)
+    CONSTRAINT sugerencia_pkey PRIMARY KEY (sugerencia_id)
 )
 
 TABLESPACE pg_default;
 
-ALTER TABLE public.modulo
+ALTER TABLE IF EXISTS public.sugerencia
     OWNER to postgres;
