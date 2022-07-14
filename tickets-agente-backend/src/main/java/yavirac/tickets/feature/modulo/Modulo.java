@@ -1,6 +1,5 @@
-package yavirac.tickets.feature.person;
+package yavirac.tickets.feature.modulo;
 
-import java.sql.Time;
 import java.sql.Timestamp;
 
 import org.springframework.data.annotation.Id;
@@ -10,16 +9,18 @@ import org.springframework.data.relational.core.mapping.Table;
 import lombok.Data;
 
 @Data
-@Table("persons")
-public class Person {
+@Table("modulo")
+public class Modulo {
 
     @Id
-    @Column("person_id")
-    private long personId;
+    @Column("modulo_id")
+    private long moduloId;
+    
     private String name;
-    private String dni;
+    private String url;
     private Timestamp created;
     private Timestamp updated;
     private boolean enabled;
+    private boolean archive;
     
 }
