@@ -1,26 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Person } from './person';
-import { PersonService } from './person.service';
-
+import { Sugerencia } from './sugerencia';
+import { SugerenciaService } from './sugerencia.service';
 @Component({
-  selector: 'app-person',
-  templateUrl: './person.component.html'
+  selector: 'app-sugerencia',
+  templateUrl: './sugerencia.component.html'
 })
-export class PersonComponent implements OnInit {
+export class SugerenciaComponent implements OnInit {
 
   constructor(
-    private personService: PersonService,
+    private sugerenciaService: SugerenciaService,
     private activatedRoute: ActivatedRoute
   ) { }
 
-  currentEntity: Person = 
+  currentEntity: Sugerencia =
   {
-    personId: 0,
-    name: "",
-    dni: "",
+    sugerenciaId: 0,
+    motivo: "",
+    sugerenci: "",
     created: new Date(),
-    enabled: true
+    enable: true,
+    archive: true,
   };
 
   ngOnInit(): void {
@@ -35,23 +35,24 @@ export class PersonComponent implements OnInit {
 
   save():void {
     console.table(this.currentEntity);
-    this.personService.save(this.currentEntity)
+    this.sugerenciaService.save(this.currentEntity)
     .subscribe(
       () => {
-        this.currentEntity = 
+        this.currentEntity =
         {
-          personId: 0,
-          name: "",
-          dni: "",
-          created: new Date(),
-          enabled: true
+          sugerenciaId: 0,
+    motivo: "",
+    sugerenci: "",
+    created: new Date(),
+    enable: true,
+    archive: true,
         };
       }
     )
   }
 
   findById(id: number):void {
-    this.personService.findById(id).subscribe(
+    this.sugerenciaService.findById(id).subscribe(
       (response) => {
         this.currentEntity = response;
       }
@@ -59,7 +60,7 @@ export class PersonComponent implements OnInit {
   }
 
   deleteById():void{
-    this.personService.deleteById(this.currentEntity.personId).subscribe(
+    this.sugerenciaService.deleteById(this.currentEntity.sugerenciaId).subscribe(
       () => {
         console.log("Borrado");
         //redireccionar ....
@@ -68,3 +69,4 @@ export class PersonComponent implements OnInit {
   }
 
 }
+
