@@ -1,5 +1,5 @@
 {
-  "name": "seguridad-frontend",
+  "name": "tickets-frontend",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
