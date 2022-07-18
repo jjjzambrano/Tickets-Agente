@@ -1,0 +1,47 @@
+<div class="grid justify-center mt-4">
+  <div class="card shadow-2xl shadow-black">
+    <div class="card-body">
+      <div class="card-title">
+        Ticket <span class="text-primary">Modulo</span>
+      </div>
+      <div class="divider"> </div>
+      <div class="grid">
+        <label for="">Nombre:</label>
+        <input class="input input-primary" type="text" name="" id=""
+          [(ngModel)]="currentEntity.name">
+        <label for="">Url:</label>
+        <input class="input input-primary" type="text" name="" id=""
+          [(ngModel)]="currentEntity.url">
+        <div class="form-control">
+          <label class="label cursor-pointer justify-start">
+            <input type="checkbox" class="toggle toggle-primary" [(ngModel)]="currentEntity.enabled" />
+            <span class="label-text ml-2">Activo</span>
+          </label>
+        </div>
+        <div class="m-3">
+          <div class="row">
+            <div class="columns-5">
+              <label>Crear</label>
+            </div>
+            <div>
+              <input class="input input-primary" type="date" name="" id="" [(ngModel)]="currentEntity.created">
+            </div>
+            <div class="row">
+              <div class="column">
+                <label>Actualizar</label>
+              </div>
+              <div>
+                <input class="input input-primary" type="date" name="" id="" [(ngModel)]="currentEntity.updated">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-actions">
+        <button class="btn btn-info btn-sm" (click)="save()">Guardar</button>
+        <button class="btn btn-sm">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+</div>
