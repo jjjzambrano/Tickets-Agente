@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Sugerencia } from './sugerencia';
-import { SugerenciaService } from './sugerencia.service';
+import { Sugerencia } from '../sugerencia';
+import { SugerenciaService } from '../sugerencia.service';
 @Component({
-  selector: 'app-sugerencia',
-  templateUrl: './sugerencia.component.html'
+  selector: 'app-sugerencia-form',
+  templateUrl: './sugerencia-form.component.html'
 })
-export class SugerenciaComponent implements OnInit {
+export class SugerenciaFormComponent implements OnInit {
 
   constructor(
     private sugerenciaService: SugerenciaService,

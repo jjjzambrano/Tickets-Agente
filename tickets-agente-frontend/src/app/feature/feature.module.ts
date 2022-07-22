@@ -5,8 +5,10 @@ import { FeatureRoutingModule } from './feature-routing.module';
 import { RolComponent } from './rol/rol.component';
 import { ModuloComponent } from './modulo/modulo.component';
 import { MotivoComponent } from './motivo/motivo.component';
-import { SugerenciaComponent } from './sugerencia/sugerencia.component';
+import { SugerenciaFormComponent } from './sugerencia/form/sugerencia-form.component';
 import { FormsModule } from '@angular/forms';
+import { SugerenciaListComponent } from './sugerencia/list/sugerencia-list.component';
+import { SugerenciaToolbarComponent } from './sugerencia/toolbar/sugerencia-toolbar.component';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { FormsModule } from '@angular/forms';
     RolComponent,
     ModuloComponent,
     MotivoComponent,
-    SugerenciaComponent
+    SugerenciaFormComponent,
+    SugerenciaListComponent,
+    SugerenciaToolbarComponent
   ],
   imports: [
     CommonModule,
