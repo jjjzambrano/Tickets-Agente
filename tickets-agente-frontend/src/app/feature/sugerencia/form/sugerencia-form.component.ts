@@ -16,7 +16,7 @@ export class SugerenciaFormComponent implements OnInit {
   currentEntity: Sugerencia =
   {
     sugerenciaId: 0,
-    motivo: "",
+    motivoId: 0,
     sugerenci: "",
     created: new Date(),
     updated: new Date(),
@@ -42,7 +42,7 @@ export class SugerenciaFormComponent implements OnInit {
         this.currentEntity =
         {
           sugerenciaId: 0,
-    motivo: "",
+    motivoId: 0,
     sugerenci: "",
     created: new Date(),
     updated: new Date(),

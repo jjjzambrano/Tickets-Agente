@@ -1,6 +1,6 @@
 export interface Sugerencia{
   sugerenciaId: number,
-  motivo: string,
+  motivoId: number,
   sugerenci: string,
   created: Date,
   updated: Date,
