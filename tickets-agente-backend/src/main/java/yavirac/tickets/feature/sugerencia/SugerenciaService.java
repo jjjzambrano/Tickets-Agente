@@ -1,4 +1,6 @@
 package yavirac.tickets.feature.sugerencia;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,5 +28,11 @@ public class SugerenciaService {
     public void deleteById(long id){
         sugerenciaRepository.deleteById(id);
     }
-    
+    public List<Sugerencia> findAll(){
+        return sugerenciaRepository.findAll();
+    }
+
+    public List<Sugerencia> findByName(String term){
+        return sugerenciaRepository.findBySugerenciLikeIgnoreCase(term+"%");
+    }
 }
