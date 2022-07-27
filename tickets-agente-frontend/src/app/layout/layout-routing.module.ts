@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ModuloComponent } from '../feature/modulo/modulo.component';
+import { ModuloFormComponent } from '../feature/modulo/form/modulo-form.component';
+import { ModuloListComponent } from '../feature/modulo/list/modulo-list.component';
 import { MotivoComponent } from '../feature/motivo/motivo.component';
 import { RolComponent } from '../feature/rol/rol.component';
 import { SugerenciaComponent } from '../feature/sugerencia/sugerencia.component';
@@ -12,7 +13,9 @@ const routes: Routes = [
     children: [
       {path: 'dashboard', component:DashboardComponent},
       {path: 'rol', component:RolComponent},
-      {path: 'modulo', component:ModuloComponent},
+      {path: 'modulo-list', component:ModuloListComponent},
+      {path: 'modulo-form', component:ModuloFormComponent},
+      {path: 'modulo-form/:id', component:ModuloFormComponent},
       {path: 'motivo', component:MotivoComponent},
       {path: 'sugerencia', component:SugerenciaComponent}
     ]
