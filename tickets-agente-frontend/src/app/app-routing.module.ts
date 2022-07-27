@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { MotivoComponent } from './motivo/motivo.component';
-
 
 const routes: Routes = [
-  {path: 'motivo', component:MotivoComponent},
-  {path: 'motivo/:id', component:MotivoComponent}
-
+  {path: '', redirectTo: '/layout', pathMatch: 'full'},
+  {path: 'layout', loadChildren:() => import('./layout/layout.module').then(m => m.LayoutModule)},
+  {path: 'feature', loadChildren:() => import('./feature/feature.module').then(m => m.FeatureModule)}
 ];
 
 @NgModule({
