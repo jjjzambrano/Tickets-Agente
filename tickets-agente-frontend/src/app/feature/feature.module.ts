@@ -15,6 +15,7 @@ import { SugerenciaFormComponent } from './sugerencia/form/sugerencia-form.compo
 import { SugerenciaListComponent } from './sugerencia/list/sugerencia-list.component';
 import { SugerenciaToolbarComponent } from './sugerencia/toolbar/sugerencia-toolbar.component';
 import { FormsModule } from '@angular/forms';
+import { ModuloComboboxComponent } from './modulo/combo-box/modulo-combobox.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { FormsModule } from '@angular/forms';
     SugerenciaFormComponent,
     SugerenciaListComponent,
     SugerenciaToolbarComponent,
+    ModuloComboboxComponent,
   ],
 
   imports: [
