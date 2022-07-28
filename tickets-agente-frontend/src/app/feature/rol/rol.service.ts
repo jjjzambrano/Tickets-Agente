@@ -25,12 +25,12 @@ export class RolService {
   public findById(id: number): Observable<Rol>{
     return this.http.get<Rol>(this.url+"/"+id, this.httpOptions);
   }
-  
+
   public findAll(): Observable<Rol[]>{
     return this.http.get<Rol[]>(this.url+"/findAll", this.httpOptions);
   }
 
   public findByName(term: string): Observable<Rol[]>{
-    return this.http.get<Rol[]>(this.url+"/findByName/"+term, this.httpOptions)
-  } 
+    return this.http.get<Rol[]>(this.url+"/findByName/"+term, this.httpOptions);
+  }
 }
