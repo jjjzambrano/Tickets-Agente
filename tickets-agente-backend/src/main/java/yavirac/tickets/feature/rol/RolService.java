@@ -1,5 +1,7 @@
 package yavirac.tickets.feature.rol;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,5 +27,13 @@ public class RolService {
 
     public void deleteById(long id){
         rolRepository.deleteById(id);
-    }  
+    }
+
+    public List<Rol> findAll(){
+        return rolRepository.findAll();
+    }
+
+    public List<Rol> findByName(String term){
+        return rolRepository.findByNameLikeIgnoreCase(term+"%");
+    }
 }

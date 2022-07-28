@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Modulo } from './modulo';
-import { ModuloService } from './modulo.service';
+import { Modulo } from '../modulo';
+import { ModuloService } from '../modulo.service';
 
 @Component({
-  selector: 'app-modulo',
-  templateUrl: './modulo.component.html',
+  selector: 'app-modulo-form',
+  templateUrl: './modulo-form.component.html',
 })
 
-export class ModuloComponent implements OnInit {
+export class ModuloFormComponent implements OnInit {
 
   constructor(
     private moduloService: ModuloService,

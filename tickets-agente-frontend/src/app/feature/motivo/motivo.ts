@@ -1,6 +1,6 @@
 export interface Motivo {
     motivoId: number,
-    descripcion: String,
+    descripcion: string,
     created: Date,
     enabled: boolean,
     archived: boolean

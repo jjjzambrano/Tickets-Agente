@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Motivo } from './motivo';
-import { MotivoService } from './motivo.service';
+import { Motivo } from '../motivo';
+import { MotivoService } from '../motivo.service';
 
 @Component({
-  selector: 'app-motivo',
-  templateUrl: './motivo.component.html'
+  selector: 'app-motivo-form',
+  templateUrl: './motivo-form.component.html'
 
 })
-export class MotivoComponent implements OnInit {
+export class MotivoFormComponent implements OnInit {
 
   constructor(
     private motivoService: MotivoService,

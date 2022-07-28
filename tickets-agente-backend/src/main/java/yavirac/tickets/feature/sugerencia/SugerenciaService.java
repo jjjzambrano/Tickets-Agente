@@ -28,6 +28,7 @@ public class SugerenciaService {
     public void deleteById(long id){
         sugerenciaRepository.deleteById(id);
     }
+    
     public List<Sugerencia> findAll(){
         return sugerenciaRepository.findAll();
     }

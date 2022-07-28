@@ -55,6 +55,7 @@ public class SugerenciaController {
     public List<Sugerencia> findAll(){
         return sugerenciaService.findAll();
     }
+    
     @GetMapping("/findByName/{term}")
     public List<Sugerencia> findByName(@PathVariable String term){
         return sugerenciaService.findByName(term);
