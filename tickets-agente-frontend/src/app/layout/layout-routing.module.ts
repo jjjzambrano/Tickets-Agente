@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ModuloFormComponent } from '../feature/modulo/form/modulo-form.component';
-import { ModuloListComponent } from '../feature/modulo/list/modulo-list.component';
-import { MotivoComponent } from '../feature/motivo/motivo.component';
 import { RolComponent } from '../feature/rol/rol.component';
 import { SugerenciaComponent } from '../feature/sugerencia/sugerencia.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -16,7 +14,9 @@ const routes: Routes = [
       {path: 'modulo-list', component:ModuloListComponent},
       {path: 'modulo-form', component:ModuloFormComponent},
       {path: 'modulo-form/:id', component:ModuloFormComponent},
-      {path: 'motivo', component:MotivoComponent},
+      {path: 'motivo-form', component:MotivoFormComponent},
+      {path: 'motivo-form/:id', component:MotivoFormComponent},
+      {path: 'motivo-list', component:MotivoListComponent},
       {path: 'sugerencia', component:SugerenciaComponent}
     ]
   }
@@ -27,3 +27,7 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class LayoutRoutingModule { }
+
+import { MotivoFormComponent } from '../feature/motivo/form/motivo-form.component';
+import { MotivoListComponent } from '../feature/motivo/list/motivo-list.component';
+import { ModuloListComponent } from '../feature/modulo/list/modulo-list.component';
