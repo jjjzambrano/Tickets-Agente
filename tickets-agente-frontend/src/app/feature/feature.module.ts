@@ -21,7 +21,7 @@ import { MotivoToolbarComponent } from './motivo/toolbar/motivo-toolbar.componen
     RolComponent,
     SugerenciaFormComponent,
     SugerenciaListComponent,
-    SugerenciaToolbarComponent
+    SugerenciaToolbarComponent,
     ModuloListComponent,
     ModuloFormComponent,
     ModuloToolbarComponent,

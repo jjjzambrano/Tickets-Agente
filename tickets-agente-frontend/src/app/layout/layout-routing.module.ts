@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MotivoFormComponent } from '../feature/motivo/form/motivo-form.component';
+import { MotivoListComponent } from '../feature/motivo/list/motivo-list.component';
+import { ModuloListComponent } from '../feature/modulo/list/modulo-list.component';
 import { ModuloFormComponent } from '../feature/modulo/form/modulo-form.component';
 import { RolComponent } from '../feature/rol/rol.component';
 import { SugerenciaFormComponent } from '../feature/sugerencia/form/sugerencia-form.component';
+import { SugerenciaListComponent } from '../feature/sugerencia/list/sugerencia-list.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MainComponent } from './main/main.component';
-import { SugerenciaListComponent } from '../feature/sugerencia/list/sugerencia-list.component';
 
 const routes: Routes = [
   {path: '', component:MainComponent ,
@@ -31,6 +34,3 @@ const routes: Routes = [
 })
 export class LayoutRoutingModule { }
 
-import { MotivoFormComponent } from '../feature/motivo/form/motivo-form.component';
-import { MotivoListComponent } from '../feature/motivo/list/motivo-list.component';
-import { ModuloListComponent } from '../feature/modulo/list/modulo-list.component';
