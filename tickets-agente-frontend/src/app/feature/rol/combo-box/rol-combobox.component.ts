@@ -4,7 +4,7 @@ import { RolService } from '../rol.service';
 
 @Component({
   selector: 'app-rol-combobox',
-  templateUrl: './rol-combobox.component.html',
+  templateUrl: './rol-combobox.component.html'
 })
 export class RolComboboxComponent implements OnInit {
 

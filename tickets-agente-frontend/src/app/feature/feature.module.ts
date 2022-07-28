@@ -17,6 +17,7 @@ import { SugerenciaToolbarComponent } from './sugerencia/toolbar/sugerencia-tool
 import { FormsModule } from '@angular/forms';
 import { ModuloComboboxComponent } from './modulo/combo-box/modulo-combobox.component';
 import { RolComboboxComponent } from './rol/combo-box/rol-combobox.component';
+import { MotivoSearchComponent } from './motivo/motivo-search/motivo-search.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { RolComboboxComponent } from './rol/combo-box/rol-combobox.component';
     SugerenciaToolbarComponent,
     ModuloComboboxComponent,
     RolComboboxComponent,
+    MotivoSearchComponent,
   ],
 
   imports: [

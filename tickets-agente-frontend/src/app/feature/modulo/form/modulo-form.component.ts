@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { MotivoService } from '../../motivo/motivo.service';
 import { Modulo } from '../modulo';
 import { ModuloService } from '../modulo.service';
 
@@ -12,7 +13,10 @@ export class ModuloFormComponent implements OnInit {
 
   constructor(
     private moduloService: ModuloService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private router:Router,
+    private motivoService: MotivoService,
+
   ) { }
 
   currentEntity: Modulo =
@@ -24,6 +28,7 @@ export class ModuloFormComponent implements OnInit {
     updated: new Date(),
     enabled: true,
     rolId: 0,
+    motivos: []
   };
 
   ngOnInit(): void {
@@ -50,6 +55,7 @@ export class ModuloFormComponent implements OnInit {
           updated: new Date(),
           enabled: true,
           rolId: 0,
+          motivos: []
         };
       }
     )
@@ -59,6 +65,13 @@ export class ModuloFormComponent implements OnInit {
     this.moduloService.findById(id).subscribe(
       (response) => {
         this.currentEntity = response;
+        this.currentEntity.motivos.forEach(
+          (auth) => {
+            this.motivoService.findById(auth.motivoId).subscribe(
+              (item) => auth.descripcion = item.descripcion
+            )
+          }
+        )
       }
     )
   }
@@ -70,6 +83,14 @@ export class ModuloFormComponent implements OnInit {
         //redireccionar ....
       }
     )
+  }
+
+  removeMotivo(id: number):void {
+
+    this.currentEntity.motivos =
+    this.currentEntity.motivos.filter(
+      (item) => item.motivoId != id 
+    );
   }
 
 }
