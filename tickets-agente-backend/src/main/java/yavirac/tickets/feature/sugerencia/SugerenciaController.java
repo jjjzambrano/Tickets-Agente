@@ -1,6 +1,4 @@
-package yavirac.tickets.feature.rol;
-
-import java.util.List;
+package yavirac.tickets.feature.sugerencia;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,48 +14,39 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/rol")
-@CrossOrigin("*")
-public class RolController {
+@RequestMapping("/api/sugerencia")
+@CrossOrigin({"*"})
+public class SugerenciaController {
     
     @Autowired
-    RolService rolService;
+    SugerenciaService sugerenciaService;
 
     //CRUD
 
     //Create
     @PostMapping("/save")
-    public Rol save(@RequestBody Rol rol){
-        return rolService.save(rol);
+    public Sugerencia save(@RequestBody Sugerencia sugerencia){
+        return sugerenciaService.save(sugerencia);
     }
 
     //Read
     @GetMapping("/{id}")
-    public Rol findbyId(@PathVariable long id){
-        return rolService.findById(id);
+    public Sugerencia findById(@PathVariable long id){
+        return sugerenciaService.findById(id);
     }
 
     //Update
     @PutMapping("/update")
-    public Rol update(@RequestBody Rol rol)
+    public Sugerencia update(@RequestBody Sugerencia sugerencia)
     {
-        return rolService.save(rol);
+        return sugerenciaService.save(sugerencia);
     }
 
     //Delete
     @DeleteMapping("/deleteById/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable long id){
-        rolService.deleteById(id);
+        sugerenciaService.deleteById(id);
     }
 
-    @GetMapping("/findAll")
-    public List<Rol> findAll(){
-        return rolService.findAll();
-    }
-
-    @GetMapping("/findByName/{term}")
-    public List<Rol> findByName(@PathVariable String term){
-        return rolService.findByName(term);
-    }
 }

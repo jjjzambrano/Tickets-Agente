@@ -1,0 +1,27 @@
+<app-rol-toolbar [entityName]="currentEntity.name"></app-rol-toolbar>
+
+<div class="grid justify-center mt-4">
+<div class="card shadow-2xl shadow-black">
+  <div class="card-body">
+    <div class="card-title">
+      Ticket<span class="text-primary" >Rol</span> 
+    </div>
+    <div class="divider"> </div>
+    <div class="grid">
+      <label for="">Nombre del Rol:</label>
+      <input class="input input-primary" type="text" name="" id="" [(ngModel)]="currentEntity.name">
+      <label for="">Módulo</label>
+      <input class="input input-primary" type="text" name="" id="" [(ngModel)]="currentEntity.module">
+      <div class="form-control">
+        <label class="label cursor-pointer justify-start">
+          <input type="checkbox" class="toggle toggle-primary" [(ngModel)]="currentEntity.admin"/>
+          <span class="label-text ml-2">Admin</span>
+        </label>
+      </div>
+    </div>
+    <div class="card-actions">
+      <button class="btn btn-primary btn-sm" (click)="save()">Guardar</button>
+      <button class="btn btn-sm">Cancelar</button>
+    </div>
+  </div>
+</div>
