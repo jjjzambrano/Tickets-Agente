@@ -3,5 +3,6 @@ export interface Motivo {
     descripcion: string,
     created: Date,
     enabled: boolean,
-    archived: boolean
+    archived: boolean,
+    moduloId: number
 }

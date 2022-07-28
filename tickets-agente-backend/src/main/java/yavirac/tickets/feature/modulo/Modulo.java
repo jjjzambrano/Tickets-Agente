@@ -25,7 +25,7 @@ public class Modulo {
     private boolean enabled;
     private boolean archive;
 
-    private long rolId;
+    private Long rolId;
 
     @MappedCollection(idColumn = "modulo_id")
     private Set<ModuloMotivo> motivos = new HashSet<>();

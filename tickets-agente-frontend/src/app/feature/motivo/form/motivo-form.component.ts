@@ -22,7 +22,8 @@ export class MotivoFormComponent implements OnInit {
     descripcion: "",
     created: new Date(),
     enabled: true,
-    archived: false
+    archived: false,
+    moduloId: 0
 
   }
 
@@ -53,7 +54,8 @@ export class MotivoFormComponent implements OnInit {
           descripcion: "",
           created: new Date(),
           enabled: true,
-          archived: false
+          archived: false,
+          moduloId: 0
         };
       }
     )

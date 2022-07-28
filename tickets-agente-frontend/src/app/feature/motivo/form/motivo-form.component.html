@@ -10,7 +10,9 @@
         <label for="">Motivo:</label>
         <input class="input input-primary" type="text" name="" id="" placeholder="Ejemplo: Perdida de carnet"
           [(ngModel)]="currentEntity.descripcion">
-
+          <label>Ciudad</label>
+          <app-modulo-combobox (moduloIdEmitter)="currentEntity.moduloId=$event" [moduloId]="currentEntity.moduloId">
+          </app-modulo-combobox>
         <div class="form-control">
           <label class="label cursor-pointer justify-start">
             <input type="checkbox" class="toggle toggle-primary" [(ngModel)]="currentEntity.enabled" />
