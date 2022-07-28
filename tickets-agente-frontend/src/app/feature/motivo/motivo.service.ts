@@ -30,7 +30,6 @@ export class MotivoService {
     return this.http.delete<Motivo>(this.url+"/deleteById/"+id, this.httpOptions);
   }
 
-<<<<<<< HEAD
   public findAll(): Observable<Motivo[]>{
     return this.http.get<Motivo[]>(this.url+"/findAll", this.httpOptions);
   }
@@ -39,6 +38,4 @@ export class MotivoService {
     return this.http.get<Motivo[]>(this.url+"/findByName/"+term, this.httpOptions)
   }
 
-=======
->>>>>>> rol
 }

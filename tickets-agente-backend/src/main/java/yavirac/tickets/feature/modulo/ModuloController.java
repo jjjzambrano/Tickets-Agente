@@ -1,4 +1,6 @@
 package yavirac.tickets.feature.modulo;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -46,6 +48,16 @@ public class ModuloController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable long id){
         moduloService.deleteById(id);
+    }
+
+    @GetMapping("/findAll")
+    public List<Modulo> findAll(){
+        return moduloService.findAll();
+    }
+
+    @GetMapping("/findByName/{term}")
+    public List<Modulo> findByName(@PathVariable String term){
+        return moduloService.findByName(term);
     }
 
 }

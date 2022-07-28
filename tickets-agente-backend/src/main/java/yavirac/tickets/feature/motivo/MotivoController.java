@@ -1,5 +1,7 @@
 package yavirac.tickets.feature.motivo;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -49,6 +51,15 @@ public class MotivoController {
      public void delete(@PathVariable long id){
          motivoService.deleteById(id);
      }
-
+    
+     @GetMapping("/findAll")
+     public List<Motivo> findAll(){
+         return motivoService.findAll();
+     }
+ 
+     @GetMapping("/findByName/{term}")
+     public List<Motivo> findByName(@PathVariable String term){
+         return motivoService.findByName(term);
+     }
     
 }

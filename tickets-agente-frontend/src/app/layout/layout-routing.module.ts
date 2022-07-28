@@ -29,11 +29,9 @@ const routes: Routes = [
     ]
   }
 ];
+
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-export class LayoutRoutingModule { }
-
-
-})
-
   exports: [RouterModule]
+})
+export class LayoutRoutingModule { }

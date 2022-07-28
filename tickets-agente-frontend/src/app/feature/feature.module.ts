@@ -15,6 +15,7 @@ import { SugerenciaFormComponent } from './sugerencia/form/sugerencia-form.compo
 import { SugerenciaListComponent } from './sugerencia/list/sugerencia-list.component';
 import { SugerenciaToolbarComponent } from './sugerencia/toolbar/sugerencia-toolbar.component';
 import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     RolFormComponent,
@@ -30,10 +31,12 @@ import { FormsModule } from '@angular/forms';
     SugerenciaListComponent,
     SugerenciaToolbarComponent,
   ],
+
   imports: [
     CommonModule,
     FeatureRoutingModule,
     FormsModule
   ]
 })
-export class FeatureModule { }
+
+export class FeatureModule {}
