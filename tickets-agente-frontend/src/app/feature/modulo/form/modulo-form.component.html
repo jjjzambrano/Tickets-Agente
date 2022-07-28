@@ -1,4 +1,4 @@
-<app-modulo-toolbar [entityName] = "currentEntity.name"></app-modulo-toolbar>
+<app-modulo-toolbar [entityName]="currentEntity.name"></app-modulo-toolbar>
 <div class="grid justify-center mt-4">
   <div class="card shadow-2xl shadow-black">
     <div class="card-body">
@@ -8,11 +8,14 @@
       <div class="divider"> </div>
       <div class="grid">
         <label for="">Nombre:</label>
-        <input class="input input-primary" type="text" name="" id=""
-          [(ngModel)]="currentEntity.name">
+        <input class="input input-primary" type="text" name="" id="" [(ngModel)]="currentEntity.name">
         <label for="">Url:</label>
-        <input class="input input-primary" type="text" name="" id=""
-          [(ngModel)]="currentEntity.url">
+        <input class="input input-primary" type="text" name="" id="" [(ngModel)]="currentEntity.url">
+
+        <label>Rol</label>
+        <app-rol-combobox (rolIdEmitter)="currentEntity.rolId=$event" [rolId]="currentEntity.rolId">
+        </app-rol-combobox>
+
         <div class="form-control">
           <label class="label cursor-pointer justify-start">
             <input type="checkbox" class="toggle toggle-primary" [(ngModel)]="currentEntity.enabled" />
@@ -44,5 +47,4 @@
       </div>
     </div>
   </div>
-
 </div>

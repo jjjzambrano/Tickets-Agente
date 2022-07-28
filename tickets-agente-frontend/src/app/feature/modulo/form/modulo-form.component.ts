@@ -22,7 +22,8 @@ export class ModuloFormComponent implements OnInit {
     url: "",
     created: new Date(),
     updated: new Date(),
-    enabled: true
+    enabled: true,
+    rolId: 0,
   };
 
   ngOnInit(): void {
@@ -47,7 +48,8 @@ export class ModuloFormComponent implements OnInit {
           url: "",
           created: new Date(),
           updated: new Date(),
-          enabled: true
+          enabled: true,
+          rolId: 0,
         };
       }
     )

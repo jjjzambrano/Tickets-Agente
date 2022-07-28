@@ -4,5 +4,6 @@ export interface Modulo {
     url: string,
     created: Date,
     updated: Date,
-    enabled: boolean
+    enabled: boolean,
+    rolId: number,
 }
