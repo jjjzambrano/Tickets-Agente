@@ -29,5 +29,10 @@ export class SugerenciaService {
   public deleteById(id: number): Observable<Sugerencia>{
     return this.http.delete<Sugerencia>(this.url+"/deleteById/"+id, this.httpOptions);
   }
-
+  public findAll(): Observable<Sugerencia[]>{
+    return this.http.get<Sugerencia[]>(this.url+"/findAll", this.httpOptions);
+  }
+  public findByName(term: string): Observable<Sugerencia[]>{
+    return this.http.get<Sugerencia[]>(this.url+"/findByName/"+term, this.httpOptions);
+  }
 }

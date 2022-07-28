@@ -1,5 +1,7 @@
 package yavirac.tickets.feature.sugerencia;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -49,4 +51,13 @@ public class SugerenciaController {
         sugerenciaService.deleteById(id);
     }
 
+    @GetMapping("/findAll")
+    public List<Sugerencia> findAll(){
+        return sugerenciaService.findAll();
+    }
+    
+    @GetMapping("/findByName/{term}")
+    public List<Sugerencia> findByName(@PathVariable String term){
+        return sugerenciaService.findByName(term);
+    }
 }

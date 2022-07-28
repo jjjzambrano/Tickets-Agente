@@ -16,7 +16,7 @@ public class Sugerencia {
     @Column("sugerencia_id")
     private long sugerenciaId;
     
-    private String motivo;
+    private long motivoId;
     private String sugerenci;
     private Timestamp created;
     private Timestamp updated;

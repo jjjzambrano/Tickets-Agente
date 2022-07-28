@@ -1,21 +1,25 @@
+<app-motivo-toolbar [entityName]="currentEntity.descripcion" ></app-motivo-toolbar>
 <div class="grid justify-center mt-4">
   <div class="card shadow-2xl shadow-black">
     <div class="card-body">
       <div class="card-title">
-        Ticket<span class="text-primary">Sugerencia</span>
+        Ticket<span class="text-primary">Motivo</span>
       </div>
       <div class="divider"> </div>
       <div class="grid">
         <label for="">Motivo:</label>
-        <input class="input input-primary" type="text" name="" id="" placeholder="Coloque el Motivo"
-          [(ngModel)]="currentEntity.motivo">
-        <label for="">Sugerencia</label>
-        <input class="input input-primary" type="text" name="" id="" placeholder="Agregue la Sugerencia"
-          [(ngModel)]="currentEntity.sugerenci">
+        <input class="input input-primary" type="text" name="" id="" placeholder="Ejemplo: Perdida de carnet"
+          [(ngModel)]="currentEntity.descripcion">
+
         <div class="form-control">
           <label class="label cursor-pointer justify-start">
-            <input type="checkbox" class="toggle toggle-primary" [(ngModel)]="currentEntity.enable" />
+            <input type="checkbox" class="toggle toggle-primary" [(ngModel)]="currentEntity.enabled" />
             <span class="label-text ml-2">Activo</span>
+          </label>
+
+          <label class="label cursor-pointer justify-start">
+            <input type="checkbox" class="toggle toggle-primary" [(ngModel)]="currentEntity.archived" />
+            <span class="label-text ml-2">Ocultar</span>
           </label>
         </div>
         <input class="input input-primary" type="date" name="" id="" [(ngModel)]="currentEntity.created">
@@ -26,5 +30,9 @@
       </div>
     </div>
   </div>
+
+  <div class="divider"> </div>
+
+
 
 </div>
