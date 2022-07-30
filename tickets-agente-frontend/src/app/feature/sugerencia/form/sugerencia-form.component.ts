@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Sugerencia } from '../sugerencia';
 import { SugerenciaService } from '../sugerencia.service';
+import { RolService } from '../../rol/rol.service';
 @Component({
   selector: 'app-sugerencia-form',
   templateUrl: './sugerencia-form.component.html'
@@ -10,7 +11,9 @@ export class SugerenciaFormComponent implements OnInit {
 
   constructor(
     private sugerenciaService: SugerenciaService,
-    private activatedRoute: ActivatedRoute
+    private rolService: RolService,
+    private activatedRoute: ActivatedRoute,
+    private router:Router
   ) { }
 
   currentEntity: Sugerencia =
@@ -21,7 +24,8 @@ export class SugerenciaFormComponent implements OnInit {
     created: new Date(),
     updated: new Date(),
     enable: true,
-    archive: true,
+    roles: [],
+    motivoNombre: ""
   };
 
   ngOnInit(): void {
@@ -47,8 +51,10 @@ export class SugerenciaFormComponent implements OnInit {
     created: new Date(),
     updated: new Date(),
     enable: true,
-    archive: true,
+    roles: [],
+    motivoNombre: ""
         };
+        this.router.navigate(['/layout/sugerencia-list']);
       }
     )
   }
@@ -57,6 +63,13 @@ export class SugerenciaFormComponent implements OnInit {
     this.sugerenciaService.findById(id).subscribe(
       (response) => {
         this.currentEntity = response;
+        this.currentEntity.roles.forEach(
+          (auth) =>{
+            this.rolService.findById(auth.rolId).subscribe(
+              (item) => auth.name = item.name
+            )
+          }
+        )
       }
     )
   }
@@ -70,5 +83,12 @@ export class SugerenciaFormComponent implements OnInit {
     )
   }
 
+  removeRol(id: number):void {
+
+    this.currentEntity.roles =
+    this.currentEntity.roles.filter(
+      (item) => item.rolId != id
+    );
+  }
 }
 
