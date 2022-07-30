@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Sugerencia } from '../sugerencia';
 import { SugerenciaService } from '../sugerencia.service';
-import { Rol } from "../../rol/rol";
 import { RolService } from '../../rol/rol.service';
 @Component({
   selector: 'app-sugerencia-form',
@@ -25,8 +24,8 @@ export class SugerenciaFormComponent implements OnInit {
     created: new Date(),
     updated: new Date(),
     enable: true,
-    archive: true,
-    roles: []
+    roles: [],
+    motivoNombre: ""
   };
 
   ngOnInit(): void {
@@ -52,9 +51,10 @@ export class SugerenciaFormComponent implements OnInit {
     created: new Date(),
     updated: new Date(),
     enable: true,
-    archive: true,
-    roles: []
+    roles: [],
+    motivoNombre: ""
         };
+        this.router.navigate(['/layout/sugerencia-list']);
       }
     )
   }

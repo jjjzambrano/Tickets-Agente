@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MotivoService } from '../../motivo/motivo.service';
 import { Sugerencia } from '../sugerencia';
 import { SugerenciaService } from '../sugerencia.service';
 @Component({
@@ -8,7 +9,8 @@ import { SugerenciaService } from '../sugerencia.service';
 export class SugerenciaListComponent implements OnInit {
 
   constructor(
-    private sugerenciaService: SugerenciaService
+    private sugerenciaService: SugerenciaService,
+    private motivoService: MotivoService
   ) { }
 
   sugerenciaList: Sugerencia[] = [];
@@ -17,7 +19,9 @@ export class SugerenciaListComponent implements OnInit {
   }
 public findAll():void {
   this.sugerenciaService.findAll().subscribe(
-    (response) => this.sugerenciaList = response
+    (response) => {this.sugerenciaList = response
+      this.completarNombre();
+    }
   )
 }
 public findByName(term: string): void{
@@ -29,5 +33,16 @@ public findByName(term: string): void{
   if (term.length===0){
     this.findAll();
   }
+}
+public completarNombre():void{
+  this.sugerenciaList.forEach(
+    (sugerencia)=>{
+      this.motivoService.findById(
+        sugerencia.motivoId
+      ).subscribe(
+        (motivo)=>sugerencia.motivoNombre=motivo.descripcion
+      )
+    }
+  )
 }
 }
