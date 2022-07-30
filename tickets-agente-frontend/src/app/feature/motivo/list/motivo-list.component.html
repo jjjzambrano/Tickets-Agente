@@ -6,6 +6,7 @@
               <tr>
                   <th></th>
                   <th>descripcion</th>
+                  <th>Modulo</th>
                   <th>Activo</th>
               </tr>
           </thead>
@@ -18,7 +19,7 @@
                       </a>
                   </td>
                   <td>{{motivo.descripcion}}</td>
-
+                  <td>{{motivo.moduloNombre}}</td>
                   <td>
                       <input class="toggle toggle-primary" type="checkbox" name="" id="" [ngModel]="motivo.enabled" >
                   </td>

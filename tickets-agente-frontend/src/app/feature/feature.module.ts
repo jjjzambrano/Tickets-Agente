@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 import { ModuloComboboxComponent } from './modulo/combo-box/modulo-combobox.component';
 import { MotivoComboboxComponent } from './motivo/combo-box/motivo-combobox.component';
 import { RolSearchComponent } from './rol/search/rol-search.component';
+import { SugerenciaSearchComponent } from './sugerencia/sugerencia-search/sugerencia-search.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { RolSearchComponent } from './rol/search/rol-search.component';
     ModuloComboboxComponent,
     MotivoComboboxComponent,
     RolSearchComponent,
+    SugerenciaSearchComponent,
   ],
 
   imports: [

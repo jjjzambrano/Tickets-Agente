@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModuloService } from '../../modulo/modulo.service';
 import { Motivo } from '../motivo';
 import { MotivoService } from '../motivo.service';
 
@@ -11,7 +12,8 @@ export class MotivoListComponent implements OnInit {
 
   constructor(
 
-    private motivoService: MotivoService
+    private motivoService: MotivoService,
+    private moduloService: ModuloService
   ) { }
 
 
@@ -24,7 +26,10 @@ export class MotivoListComponent implements OnInit {
 
   public findAll():void {
     this.motivoService.findAll().subscribe(
-      (response) => this.motivoList = response
+      (response) => {
+        this.motivoList = response
+        this.completarNombre();
+      }
     )
   }
 
@@ -38,5 +43,17 @@ export class MotivoListComponent implements OnInit {
       this.findAll();
     }
 
-  }//dsdsd
+  }//find by name
+
+  public completarNombre():void{
+    this.motivoList.forEach(
+      (motivo)=>{
+        this.moduloService.findById(
+          motivo.moduloId
+        ).subscribe(
+          (modulo)=>motivo.moduloNombre=modulo.name
+        )
+      }
+    )
+  }
 }
