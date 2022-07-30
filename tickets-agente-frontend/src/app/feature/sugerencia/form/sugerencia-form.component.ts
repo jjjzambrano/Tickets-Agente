@@ -21,7 +21,7 @@ export class SugerenciaFormComponent implements OnInit {
     created: new Date(),
     updated: new Date(),
     enable: true,
-    archive: true,
+
   };
 
   ngOnInit(): void {
@@ -47,7 +47,7 @@ export class SugerenciaFormComponent implements OnInit {
     created: new Date(),
     updated: new Date(),
     enable: true,
-    archive: true,
+
         };
       }
     )

@@ -5,5 +5,5 @@ export interface Sugerencia{
   created: Date,
   updated: Date,
   enable: boolean,
-  archive: boolean
+
 }

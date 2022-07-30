@@ -10,7 +10,7 @@ public class MotivoSugerencia {
     private long id;
     private Long motivoId;
     private Long sugerenciaId;
-    private String comentario;
+    
 
     
 }
