@@ -9,6 +9,8 @@ import { SugerenciaComponent } from './sugerencia/sugerencia.component';
 import { FormsModule } from '@angular/forms';
 import { RolListComponent } from './rol/list/rol-list.component';
 import { RolToolbarComponent } from './rol/toolbar/rol-toolbar.component';
+import { PersonaComboboxComponent } from './persona/persona-combobox.component';
+import { ModuloSearchComponent } from './modulo/modulo-search/modulo-search.component';
 
 
 @NgModule({
@@ -19,6 +21,8 @@ import { RolToolbarComponent } from './rol/toolbar/rol-toolbar.component';
     SugerenciaComponent,
     RolListComponent,
     RolToolbarComponent,
+    PersonaComboboxComponent,
+    ModuloSearchComponent,
   ],
   imports: [
     CommonModule,

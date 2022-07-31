@@ -1,5 +1,7 @@
 package yavirac.tickets.feature.modulo;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +28,10 @@ public class ModuloService {
 
     public void deleteById(long id){
         moduloRepository.deleteById(id);
+    }
+
+    public List<Modulo> findByName(String term){
+        return moduloRepository.findByNameLikeIgnoreCase(term+"%");
     }
     
 }

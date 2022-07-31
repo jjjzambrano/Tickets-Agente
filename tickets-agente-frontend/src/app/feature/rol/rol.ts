@@ -1,8 +1,12 @@
+import { Modulo } from "../modulo/modulo";
+
 export interface Rol {
     rolId: number,
     name: string,
     admin: boolean,
-    module: number,
+    personaId: number,
     created: Date,
-    updated: Date
+    updated: Date,
+    modulos: Modulo[],
+    personaNombre: string
 } 

@@ -30,4 +30,11 @@ export class ModuloService {
     return this.http.delete<Modulo>(this.url+"/deleteById/"+id, this.httpOptions);
   }
 
+  public findByName(term: string): Observable<Modulo[]>{
+    return this.http.get<Modulo[]>(this.url+"/findByName/"+term, this.httpOptions);
+  }
+
+  public findAll(): Observable<Modulo[]>{
+    return this.http.get<Modulo[]>(this.url+"/findAll", this.httpOptions);
+  }
 }
