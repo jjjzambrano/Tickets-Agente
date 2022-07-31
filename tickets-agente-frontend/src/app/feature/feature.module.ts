@@ -6,8 +6,8 @@ import { RolFormComponent } from './rol/form/rol.form.component';
 import { RolListComponent } from './rol/list/rol-list.component';
 import { RolToolbarComponent } from './rol/toolbar/rol-toolbar.component';
 import { ModuloFormComponent } from './modulo/form/modulo-form.component';
-import { ModuloListComponent } from './modulo/list/modulo-list.component';
 import { ModuloToolbarComponent } from './modulo/toolbar/modulo-toolbar.component';
+import { ModuloListComponent } from './modulo/list/modulo-list.component';
 import { MotivoFormComponent } from './motivo/form/motivo-form.component';
 import { MotivoListComponent } from './motivo/list/motivo-list.component';
 import { MotivoToolbarComponent } from './motivo/toolbar/motivo-toolbar.component';
@@ -19,6 +19,8 @@ import { ModuloComboboxComponent } from './modulo/combo-box/modulo-combobox.comp
 import { MotivoComboboxComponent } from './motivo/combo-box/motivo-combobox.component';
 import { RolSearchComponent } from './rol/search/rol-search.component';
 import { SugerenciaSearchComponent } from './sugerencia/sugerencia-search/sugerencia-search.component';
+import { PersonaComboboxComponent } from './persona/persona-combobox.component';
+import { ModuloSearchComponent } from './modulo/modulo-search/modulo-search.component';
 
 
 @NgModule({
@@ -39,6 +41,8 @@ import { SugerenciaSearchComponent } from './sugerencia/sugerencia-search/sugere
     MotivoComboboxComponent,
     RolSearchComponent,
     SugerenciaSearchComponent,
+    PersonaComboboxComponent,
+    ModuloSearchComponent,
   ],
 
   imports: [

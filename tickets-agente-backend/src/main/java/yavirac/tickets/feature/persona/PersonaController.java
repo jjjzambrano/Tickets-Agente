@@ -1,11 +1,8 @@
-package yavirac.tickets.feature.modulo;
+package yavirac.tickets.feature.persona;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-
-import java.util.List;
-
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,49 +15,44 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/modulo")
+@RequestMapping("/api/persona")
 @CrossOrigin({"*"})
-public class ModuloController {
+public class PersonaController {
     
     @Autowired
-    ModuloService moduloService;
+    PersonaService personaService;
 
     //CRUD
 
     //Create
     @PostMapping("/save")
-    public Modulo save(@RequestBody Modulo modulo){
-        return moduloService.save(modulo);
+    public Persona save(@RequestBody Persona persona){
+        return personaService.save(persona);
     }
 
     //Read
     @GetMapping("/{id}")
-    public Modulo findById(@PathVariable long id){
-        return moduloService.findById(id);
+    public Persona findById(@PathVariable long id){
+        return personaService.findById(id);
     }
 
     //Update
     @PutMapping("/update")
-    public Modulo update(@RequestBody Modulo modulo)
+    public Persona update(@RequestBody Persona persona)
     {
-        return moduloService.save(modulo);
+        return personaService.save(persona);
     }
 
     //Delete
     @DeleteMapping("/deleteById/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable long id){
-        moduloService.deleteById(id);
+        personaService.deleteById(id);
     }
 
     @GetMapping("/findAll")
-    public List<Modulo> findAll(){
-        return moduloService.findAll();
+    public List<Persona> findAll(){
+        return personaService.findAll();
     }
-
-    @GetMapping("/findByName/{term}")
-    public List<Modulo> findByName(@PathVariable String term){
-        return moduloService.findByName(term);
-    }
-
+    
 }

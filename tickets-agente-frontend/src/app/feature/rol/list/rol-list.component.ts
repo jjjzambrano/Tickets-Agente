@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PersonaService } from '../../persona/persona.service';
 import { Rol } from '../rol';
 import { RolService } from '../rol.service';
 
@@ -9,7 +10,8 @@ import { RolService } from '../rol.service';
 export class RolListComponent implements OnInit {
 
   constructor(
-    private rolService: RolService
+    private rolService: RolService,
+    private personaService: PersonaService
   ) { }
 
     rolList: Rol[] = [];
@@ -20,7 +22,23 @@ export class RolListComponent implements OnInit {
 
   public findAll():void {
     this.rolService.findAll().subscribe(
-      (response) => this.rolList = response
+      (response) => {
+        this.rolList = response;
+        this.completarNombres();
+      }
+    )
+  }
+
+  //poner un campo de otra tabla
+  public completarNombres(): void{
+    this.rolList.forEach(
+      (rol)=> {
+        this.personaService.findById (
+          rol.personaId
+        ).subscribe(
+          (persona)=>{rol.personaNombre=persona.name}
+        )
+      }
     )
   }
 
