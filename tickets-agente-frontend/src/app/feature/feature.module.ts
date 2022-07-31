@@ -21,6 +21,8 @@ import { RolSearchComponent } from './rol/search/rol-search.component';
 import { SugerenciaSearchComponent } from './sugerencia/sugerencia-search/sugerencia-search.component';
 import { PersonaComboboxComponent } from './persona/persona-combobox.component';
 import { ModuloSearchComponent } from './modulo/modulo-search/modulo-search.component';
+import { RolComboboxComponent } from './rol/combo-box/rol-combobox.component';
+import { MotivoSearchComponent } from './motivo/motivo-search/motivo-search.component';
 
 
 @NgModule({
@@ -43,6 +45,8 @@ import { ModuloSearchComponent } from './modulo/modulo-search/modulo-search.comp
     SugerenciaSearchComponent,
     PersonaComboboxComponent,
     ModuloSearchComponent,
+    RolComboboxComponent,
+    MotivoSearchComponent,
   ],
 
   imports: [
